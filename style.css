@@ -1,0 +1,218 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background-color: #f0f2f5;
+}
+
+/* Header Section */
+header {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("p1.jpg");
+    background-size: cover;
+    position: relative;
+}
+
+/* Navigation */
+nav {
+    width: 100%;
+    height: 100px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    position: relative;
+}
+
+.logo {
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #d1d1d1;
+    padding: 10px 20px;
+    font-size: 20px;
+    position: relative;
+}
+
+.menu a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #632aa9;
+    transition: 0.4s;
+}
+
+.menu a:hover::before {
+    width: 100%;
+}
+
+.register a {
+    text-decoration: none;
+    color: #e5dfea;
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: #0e0234;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+
+.register a:hover {
+    background-color: transparent;
+    border: 1px solid #392c5f;
+}
+
+/* Hamburger for Mobile View */
+.hamburger {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* Hero Text */
+.hero-text {
+    max-width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.hero-text span {
+    letter-spacing: 5px;
+}
+
+.hero-text h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.cta-btn {
+    text-decoration: none;
+    color: white;
+    background: #0e0234;
+    padding: 12px 24px;
+    letter-spacing: 5px;
+    transition: 0.4s;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.cta-btn:hover {
+    background: transparent;
+    border: 2px solid #392c5f;
+}
+
+/* Social Media Links */
+.socials {
+    padding: 20px;
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+}
+
+.socials a {
+    text-decoration: none;
+    color: white;
+    font-size: 2.5rem;
+    transition: color 0.3s;
+    margin: 0 10px;
+}
+
+.socials a:hover {
+    color: #900659;
+}
+
+/* Footer */
+footer {
+    background: transparent;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100px;
+        background: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        left: 0;
+        padding: 20px 0;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hero-text {
+        width: 90%;
+        top: 55%;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 0 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-text p {
+        font-size: 1em;
+    }
+
+    .socials {
+        bottom: 20px;
+    }
+
+    .register a {
+        padding: 8px 16px;
+        font-size: 16px;
+    }
+
+    .cta-btn {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
